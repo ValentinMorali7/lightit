@@ -67,12 +67,14 @@ src/
 ### Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/yourusername/patient-management-app.git
+git clone https://github.com/ValentinMorali7/lightit.git
 cd patient-management-app
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -80,6 +82,7 @@ yarn
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 # or
@@ -125,6 +128,7 @@ The application follows a component-based architecture with clear separation of 
 ### API Integration
 
 The application connects to a REST API for patient data:
+
 - Fetching patients list
 - Creating new patients
 - Updating existing patients
