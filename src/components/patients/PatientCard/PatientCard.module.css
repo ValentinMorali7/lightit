@@ -1,0 +1,258 @@
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  border: 1px solid #f0f0f0;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+  border-color: #e5e7eb;
+}
+
+.header {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f3f4f6;
+  background: linear-gradient(to right, #fcfcfc, #f9fafb);
+}
+
+.patientInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatarContainer {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e9f0;
+  background-color: #f5f7fa;
+}
+
+.initialAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #4361ee;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: 2px solid #e5e9f0;
+}
+
+.nameAndDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.website {
+  font-size: 12px;
+  color: #6b7280;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.website:hover {
+  color: #4361ee;
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+.actionButton {
+  padding: 8px;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: #f3f4f6;
+}
+
+.actionIcon {
+  width: 16px;
+  height: 16px;
+  color: #6b7280;
+}
+
+.body {
+  padding: 16px 20px;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.infoRow:last-child {
+  margin-bottom: 0;
+  grid-template-columns: 1fr;
+}
+
+.infoGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.infoValue {
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.footer {
+  padding: 12px 20px;
+  border-top: 1px solid #f3f4f6;
+  text-align: center;
+}
+
+.expandButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #4b5563;
+  background-color: #f9fafb;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.expandButton:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.expandIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.expandedContent {
+  padding: 20px;
+  border-top: 1px solid #f3f4f6;
+  background-color: #f9fafb;
+}
+
+.detailSection {
+  margin-bottom: 20px;
+}
+
+.detailSection:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+  margin: 0 0 8px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.detailContent {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0;
+  white-space: pre-line;
+  padding: 0 4px;
+}
+
+.recordInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.websiteLink {
+  font-size: 14px;
+  color: #4361ee;
+  text-decoration: none;
+  word-break: break-all;
+  display: block;
+  line-height: 1.5;
+  padding: 0 4px;
+}
+
+.websiteLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .actions {
+    align-self: flex-end;
+  }
+  
+  .infoRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .recordInfo {
+    grid-template-columns: 1fr;
+  }
+}

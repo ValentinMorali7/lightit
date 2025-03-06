@@ -1,0 +1,94 @@
+/* src/components/common/Notification.module.css */
+.notification {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  max-width: 24rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-left: 1rem;
+  border-radius: 9999px;
+  opacity: 0.7;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+.closeIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Notification types */
+.success {
+  background-color: #d1fae5;
+  border-left: 4px solid #10b981;
+  color: #047857;
+}
+
+.success .closeButton {
+  color: #047857;
+}
+
+.error {
+  background-color: #fee2e2;
+  border-left: 4px solid #ef4444;
+  color: #b91c1c;
+}
+
+.error .closeButton {
+  color: #b91c1c;
+}
+
+.warning {
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  color: #b45309;
+}
+
+.warning .closeButton {
+  color: #b45309;
+}
+
+.info {
+  background-color: #dbeafe;
+  border-left: 4px solid #3b82f6;
+  color: #1d4ed8;
+}
+
+.info .closeButton {
+  color: #1d4ed8;
+}

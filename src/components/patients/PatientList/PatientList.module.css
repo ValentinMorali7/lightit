@@ -1,0 +1,133 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.patientGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Loading State */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  gap: 20px;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(67, 97, 238, 0.1);
+  border-radius: 50%;
+  border-top-color: #4361ee;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error State */
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  background-color: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 10px;
+  text-align: center;
+  gap: 20px;
+}
+
+.errorIcon {
+  color: #e53e3e;
+  width: 48px;
+  height: 48px;
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  gap: 20px;
+}
+
+.emptyIcon {
+  color: #4361ee;
+  width: 64px;
+  height: 64px;
+  opacity: 0.6;
+}
+
+.emptyState h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.emptyState p {
+  color: #6b7280;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Delete Confirmation */
+.deleteConfirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 0;
+  gap: 20px;
+}
+
+.warningIcon {
+  color: #ed8936;
+  width: 48px;
+  height: 48px;
+}
+
+.deleteMessage {
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+  .patientGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .patientGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

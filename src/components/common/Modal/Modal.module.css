@@ -1,0 +1,85 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .modal {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90vw;
+    z-index: 1001;
+  }
+  
+  /* Modal sizes */
+  .small {
+    max-width: 24rem;
+  }
+  
+  .medium {
+    max-width: 32rem;
+  }
+  
+  .large {
+    max-width: 48rem;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .closeButton {
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.25rem;
+    border-radius: 9999px;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .footer {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+  }
